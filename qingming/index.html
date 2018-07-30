@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="face" id="facePage">
+            <div class="yanzi" id="yanzi"></div>
+            <div class="startBtn" id="startBtn"></div>
+        </div>
+        <div class="page p2" style="display:none;" id="page2">
+            <div class="bgm" id="micBtn">
+                <svg version="1.1" id="Layer_1" x="0px" y="0px" width="26" height="26" viewBox="0 0 30 42" enable-background="new 0 0 30 42"
+                    xml:space="preserve">
+                    <image id="image0" width="30" height="42" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAqCAQAAAAO0iOSAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+                                    AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
+                                    RQfiAQ8NJQuForPzAAACE0lEQVRIx52WPWsUURSG35nsLruT9SvEGBUJIlhIQEVBRbBQLEVYl9QW
+                                    ooUWghZaphP8B0o6OwmChSF9MAopDClEEIQQAhJWEA2rY8xjsXc2Ox9ndsczxdx73nk4O+89c+8K
+                                    GdcoSzzFM3UhW3oEwNX/gUu8BGCJIRv2lR2+AknSad2QGRbsadjpMzpUFJY8d6/rtUaLwjtxRl/U
+                                    ULkITM+4rlnN6XjGM5lXlUXScSfuvQXXWCYrZqn3XyorGnqvsSKGxeOE3ka4DW+byjHNd7ogv0lC
+                                    vclUT2lGvu32MGvAJiOM8yzTuiv0hSsIj8kM71cp94Nrbl7hSQo/28/tqM9CPdathNa0Ku+iBbQJ
+                                    YtmHscofLXgPbaDN7ljWZ64H/l5snbc1rbA72yjaYR/0uTtetOFs5Ze+dccv7D2sKkkaSuWjTSHU
+                                    gt2enUdLifyYjrrRA21abo8A8Jv9ifw95/QKgd2e2fBh1gH4y8lBNgNis7s6KElqaNmpuZXHY9nz
+                                    ADSjedyQqgJ5kn5qX8LbTrzThLa0Hk0jOFBT1zShvfIlbbiFSsdq4qUQF50RyfjDkbxTsiTpghYG
+                                    NCzVMTW9MtWS+fMdfFkHTHVLX/Phmznqff3Ig2VYBfCJSp5dyHeHeDpCXe/58I3KbaPuVH7Vzik5
+                                    lYnezv8TtXPETrISA1tcGgSNPsky53jOGi3maVAdBEToH72JD/HdzInKAAAAJXRFWHRkYXRlOmNy
+                                    ZWF0ZQAyMDE4LTAxLTE1VDEzOjM3OjExKzA4OjAwHbU8xwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAx
+                                    OC0wMS0xNVQxMzozNzoxMSswODowMGzohHsAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVh
+                                    ZHlxyWU8AAAAAElFTkSuQmCC" />
+                </svg>
+                <audio loop  id="bgm">
+                    <source src="http://mat1.gtimg.com/cq/ershouche/bgm.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <!-- 吃到果实 -->
+            <audio   id="gift">
+                <source src="./music/gif.mp3">
+            </audio>
+            <!-- 吃到石头 -->
+            <audio   id="obsc">
+                <source src="./music/obs.mp3" type="audio/mpeg">
+            </audio>
+            <canvas class="can1" id="canvas1"></canvas>
+        </div>
+        <div class="page p3" id="page3">
+            <div class="content">
+                <div class="fheader center"></div>
+                <div class="form center">
+                    <p class="score">您的成绩为：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="score">581</span>分</p>
+                    <p class="cond">成绩必须达到
+                        <span class="condit" id="condi_score">200</span>
+                    </p>
+                    <div class="rank_inf">
+                        <p class="best_score">最佳成绩：
+                            <span id="bestS">999分</span>
+                        </p>
+                        <p class="best_rank">最佳排名：
+                            <span id="bestR">No.1</span>
+                        </p>
+                    </div>
+                    <div class="param">今天还有
+                        <span class="times" id="times">3</span>次机会</div>
+                    <div class="info_btn_cj" id="cj"></div>
+                    <div class="info_btn_rp" id="rp"></div>
+
+                </div>
+                <div class="btns-box center">
+                    <div class="left"></div>
+                    <div class="right">
+                        <div class="replay" id="replay"></div>
+                        <div class="reback" id="reback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="http://mat1.gtimg.com/cq/jr18/lib/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/person.js"></script>
+    <script src="js/obstacle.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/score1.js"></script>
+
+</body>
+
+</html>

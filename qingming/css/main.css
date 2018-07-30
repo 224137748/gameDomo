@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+.wrap,
+.face,
+.page,
+canvas {
+  width: 100%;
+  height: 100%; }
+
+.wrap {
+  position: relative; }
+  .wrap .face {
+    position: relative;
+    background: url("../imgs/face.jpg") no-repeat 0 0;
+    background-size: 100% 100%;
+    transition: opacity 0.6s ease-in-out 0s; }
+    .wrap .face.fadeOut {
+      opacity: 0; }
+    .wrap .face .yanzi {
+      position: absolute;
+      left: 288px;
+      top: 269px;
+      width: 34px;
+      height: 24px;
+      background: url("../imgs/yanzi.png") no-repeat 0 0;
+      background-size: 34px 24px; }
+    .wrap .face .startBtn {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 37px;
+      margin: auto;
+      width: 165.5px;
+      height: 63.5px;
+      background: url("../imgs/startBtn.png") no-repeat 0 0;
+      background-size: 100% 100%; }
+  .wrap .page {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .wrap .p2 {
+    position: relative; }
+    .wrap .p2 .bgm {
+      position: fixed;
+      transform-origin: center center;
+      top: 26px;
+      right: 30px;
+      transform: rotate(8deg);
+      z-index: 1; }
+    .wrap .p2 .bgm.play {
+      -webkit-animation: bgm 2s ease-in infinite 0s; }
+@-webkit-keyframes bgm {
+  50% {
+    transform: rotate(-6deg); } }
+  .wrap .p3 {
+    background: rgba(0, 0, 0, 0.8);
+    display: none; }
+    .wrap .p3 .content {
+      position: relative;
+      width: 280px;
+      height: 100%;
+      margin: 0 auto; }
+      .wrap .p3 .content .fheader {
+        z-index: 1; }
+      .wrap .p3 .content .form {
+        top: 157px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 353px;
+        background: url("../imgs/p3_infor_bg.png") no-repeat 0 0;
+        background-size: 100% 100%; }
+        .wrap .p3 .content .form .score {
+          position: relative;
+          width: 192.5px;
+          height: 39px;
+          margin-top: 10px;
+          background: #fed307;
+          border: 1px solid #000;
+          border-radius: 8px;
+          font-size: 15px;
+          line-height: 39px;
+          text-align: center; }
+          .wrap .p3 .content .form .score span {
+            position: absolute;
+            right: 42px;
+            font-size: 24px;
+            line-height: 39px; }
+        .wrap .p3 .content .form .cond, .wrap .p3 .content .form .param {
+          font-size: 16px;
+          color: #fed207; }
+        .wrap .p3 .content .form .rank_inf {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          width: 192.5px;
+          height: 85px;
+          border: 1px solid #fed207;
+          border-radius: 8px;
+          color: #fed207; }
+        .wrap .p3 .content .form .info_btn_cj, .wrap .p3 .content .form .info_btn_rp {
+          width: 177px;
+          height: 62px; }
+      .wrap .p3 .content .btns-box {
+        bottom: 29px;
+        width: 100%;
+        overflow: hidden; }
+        .wrap .p3 .content .btns-box .left {
+          float: left;
+          width: 123.5px;
+          height: 49px;
+          background: url("../imgs/p3_ranking.png") no-repeat 0 0;
+          background-size: 100% 100%; }
+        .wrap .p3 .content .btns-box .right {
+          float: right; }
+    .wrap .p3.success {
+      display: block; }
+      .wrap .p3.success .content .fheader {
+        top: 17px;
+        width: 269px;
+        height: 170px;
+        background: url("../imgs/p3_suc_head.png") no-repeat 0 0;
+        background-size: 100% 100%; }
+      .wrap .p3.success .content .form .score {
+        margin-top: 20px; }
+      .wrap .p3.success .content .form .info_btn_cj {
+        background: url("../imgs/p3_suc_cj.png") no-repeat 0 0;
+        background-size: 100% 100%; }
+      .wrap .p3.success .content .form .info_btn_rp {
+        display: none; }
+      .wrap .p3.success .content .btns-box .right .replay {
+        width: 127.5px;
+        height: 50px;
+        background: url("../imgs/p3_replay.png") no-repeat 0 0;
+        background-size: 100% 100%; }
+      .wrap .p3.success .content .btns-box .right .reback {
+        display: none; }
+    .wrap .p3.fail {
+      display: block; }
+      .wrap .p3.fail .content .fheader {
+        top: 11px;
+        width: 241.5px;
+        height: 174.5px;
+        background: url("../imgs/p3_fil_head.png") no-repeat 0 0;
+        background-size: 100% 100%; }
+      .wrap .p3.fail .content .param {
+        display: none; }
+      .wrap .p3.fail .content .form .info_btn_rp {
+        background: url("../imgs/p3_fail_replay.png") no-repeat 0 0;
+        background-size: 100% 100%; }
+      .wrap .p3.fail .content .form .info_btn_cj {
+        display: none; }
+      .wrap .p3.fail .content .btns-box .right .reback {
+        width: 127.5px;
+        height: 50px;
+        background: url("../imgs/p3_reback.png") no-repeat 0 0;
+        background-size: 100% 100%; }
+      .wrap .p3.fail .content .btns-box .right .replay {
+        display: none; }
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+/*# sourceMappingURL=main.css.map */

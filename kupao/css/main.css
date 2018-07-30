@@ -1,0 +1,12 @@
+*{padding: 0;margin: 0;}
+html,body,.wrap,.p{width: 100%;height: 100%;}
+.page2{
+    position: relative;
+}
+.page2 canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>酷跑demo</title>
+    <style>
+        #reolayBtn{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="page1 p" style="display:none;"></div>
+        <div class="page2 p" id="page2">
+            <canvas id="canvas1" ></canvas>
+            <canvas id="canvas3"></canvas>
+            <canvas id="canvas4"></canvas>
+            <canvas id="canvas2"></canvas>
+        </div>
+        <button id="reolayBtn">重玩</button>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/obstacle.js"></script>
+    <script src="js/runner.js"></script>
+    <script src="js/collision.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/score1.js"></script>
+    <script src="js/score2.js"></script>
+    <script>
+        var btn = document.getElementById('reolayBtn');
+        btn.onclick = function () {  
+            console.log(1111);
+            data.init();
+        }
+    </script>
+</body>
+</html>
